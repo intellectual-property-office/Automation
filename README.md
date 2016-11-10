@@ -1,4 +1,4 @@
-# IPO frontend compiler 
+# IPO frontend build tool
 
 This is a batch script that will download all IPO frontend styles ready for use in your project.
 
