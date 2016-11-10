@@ -1,15 +1,18 @@
-# Automation
+# IPO Frontend Installer
 
 This is a batch script that will install all IPO frontend styles.
 
 It includes:
 - <a href="https://github.com/alphagov/govuk_elements">GOV.UK elements</a>
 - <a href="https://github.com/alphagov/govuk_frontend_toolkit">GOV.UK frontend toolkit</a>
+- <a href="https://github.com/alphagov/govuk_template">GOV.UK template</a>
 - <a href="https://github.com/intellectual-property-office/Assets">IPO assets</a>
 
 All SASS will be compiled and output as CSS. 
 
 ## Installation
+
+Requires <a href="https://nodejs.org/en/">node.js</a> version 3.X+
 
 1. Download or clone this repo
 2. Launch the batch script
@@ -20,7 +23,7 @@ There are two modes available
 
 <b>User mode:</b>
 
-This will remove any file not needed for the frontend to function. It will also minify CSS and JS output files. This mode is recommended for the majority of users.
+This will remove any file not needed for the frontend to function. It will also minify CSS and JS output files. Source files will be included. This mode is recommended for the majority of users.
 
 <b>Developer mode:</b>
 
