@@ -18,10 +18,12 @@ All SASS will be compiled and output as CSS.
 
 There are two modes available
 
-User mode:
+<b>User mode:</b>
+
 This will remove any file not needed for the frontend to function. It will also minify CSS and JS output files. This mode is recommended for the majority of users.
 
-Developer mode:
+<b>Developer mode:</b>
+
 This will keep all files used in the installation. CSS and JS will remain un-minified. This is recommended for debug purposes. 
 
 ## Help
