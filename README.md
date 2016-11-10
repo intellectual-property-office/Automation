@@ -1,6 +1,6 @@
-# IPO Frontend Installer
+# IPO frontend compiler 
 
-This is a batch script that will install all IPO frontend styles.
+This is a batch script that will download all IPO frontend styles ready for use in your project.
 
 It includes:
 - <a href="https://github.com/alphagov/govuk_elements">GOV.UK elements</a>
@@ -9,6 +9,8 @@ It includes:
 - <a href="https://github.com/intellectual-property-office/Assets">IPO assets</a>
 
 All SASS will be compiled and output as CSS. 
+
+Local IPO assets will be combined with existing GOV.UK styles. 
 
 ## Installation
 
