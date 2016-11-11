@@ -16,8 +16,8 @@ Local IPO assets will be combined with existing GOV.UK styles.
 
 Requires <a href="https://nodejs.org/en/">node.js</a> version 3.X+
 
-1. Download or clone this repo
-2. Launch the batch script
+### 1. Download or clone this repo
+### 2. Launch the batch script
 
 ## Usage
 
