@@ -1,14 +1,14 @@
-# IPO frontend build tool
+# UK Intellectual Property Office Frontend Build Tool
 
-This is a batch script that will download all IPO frontend styles ready for use in your project.
+This is a batch script that will download and compile all UK IPO frontend styles, ready for use in your project.
 
 It includes:
 - <a href="https://github.com/alphagov/govuk_elements">GOV.UK elements</a>
-- <a href="https://github.com/alphagov/govuk_frontend_toolkit">GOV.UK frontend toolkit</a>
-- <a href="https://github.com/alphagov/govuk_template">GOV.UK template</a>
-- <a href="https://github.com/intellectual-property-office/Assets">IPO assets</a>
+- <a href="https://github.com/alphagov/govuk_frontend_toolkit">GOV.UK Frontend Toolkit</a>
+- <a href="https://github.com/alphagov/govuk_template">GOV.UK Template</a>
+- <a href="https://github.com/intellectual-property-office/Assets">UK Intellectual Property Office Assets</a>
 
-All SASS will be compiled and output as CSS. 
+All SASS will be output as CSS. 
 
 Local IPO assets will be combined with existing GOV.UK styles. 
 
@@ -21,15 +21,23 @@ Requires <a href="https://nodejs.org/en/">Node.js</a> version 3.X+
 
 ## Usage
 
-There are two modes available
+There are two usage modes available
 
-<b>User mode:</b>
+<b>Install assets</b>
 
-This will remove any file not needed for the frontend to function. It will also minify CSS and JS output files. Source files will be included. This mode is recommended for the majority of users.
+This script will compile a production ready frontend asset set. You will have the option to select the following outputs:
 
-<b>Developer mode:</b>
+User mode: 
 
-This will keep all files used in the installation. CSS and JS will remain un-minified. This is recommended for debug purposes. 
+This will remove any files not needed for the frontend to function. It will also minify CSS and JS output files. Source files will be included. This mode is recommended for the majority of users.
+
+Developer mode: 
+
+This will keep all files used in the installation. You will be given the option to minify JS and CSS files. This is recommended for debug purposes. 
+
+<b>Edit assets</b>
+
+This script will set up a developer environment, that will allow you to make changes or additions to IPO assets.
 
 ## Help
 
