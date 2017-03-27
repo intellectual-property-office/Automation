@@ -23,19 +23,15 @@ Requires <a href="https://nodejs.org/en/">Node.js</a> version 3.X+
 
 There are two usage modes available
 
-<b>Install assets</b>
+### Install assets
 
 This script will compile a production ready frontend asset set. You will have the option to select the following outputs:
 
-User mode: 
+* <b>User mode:</b> This will remove any files not needed for the frontend to function. It will also minify CSS and JS output files. Source files will be included. This mode is recommended for the majority of users.
 
-This will remove any files not needed for the frontend to function. It will also minify CSS and JS output files. Source files will be included. This mode is recommended for the majority of users.
+* <b>Developer mode:</b> This will keep all files used in the installation. You will be given the option to minify JS and CSS files. This is recommended for debug purposes. 
 
-Developer mode: 
-
-This will keep all files used in the installation. You will be given the option to minify JS and CSS files. This is recommended for debug purposes. 
-
-<b>Edit assets</b>
+### Edit assets
 
 This script will set up a developer environment, that will allow you to make changes or additions to IPO assets.
 
