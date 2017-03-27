@@ -24,8 +24,8 @@ Local IPO assets will be combined with existing GOV.UK styles.
 
 ## Installation 
 
-#### 1. Download or clone this repo
-#### 2. Launch the batch script
+#### 1. Download or clone this repo.
+#### 2. Launch the batch script.
 
 ## Usage
 
