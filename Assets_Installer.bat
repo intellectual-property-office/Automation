@@ -345,7 +345,7 @@ echo ************************************************************
 echo.
 :: Install govuk-elements-sass and govuk_frontend_toolkit NPM modules (SCSS + JS + Images)
 echo INSTALLING GovUK Elements Sass
-call npm install govuk-elements-sass@2.1.2
+call npm install govuk-elements-sass@3.0.2
 echo DONE
 echo.
 :: Install govuk_template_ejs NPM module (CSS)
@@ -401,7 +401,7 @@ echo ************************************************************
 echo.
 :: Install govuk-elements-sass and govuk_frontend_toolkit NPM modules (SCSS + JS + Images)
 echo INSTALLING GovUK Elements Sass
-call npm install govuk-elements-sass@2.1.2
+call npm install govuk-elements-sass
 echo DONE
 echo.
 :: Install govuk_template_ejs NPM module (CSS)
@@ -414,7 +414,7 @@ echo INSTALLING IPO Template Sass
 call npm i ipo-assets-frontend
 echo DONE
 echo.
-echo LEGACY INSTALLATION SUCCESFUL
+echo EXPERIMENTAL INSTALLATION SUCCESFUL
 echo.
 goto :import
 
