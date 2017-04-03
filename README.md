@@ -35,9 +35,9 @@ There are two usage modes available.
 
 This script will compile a production ready frontend asset set. You will have the option to select from the following outputs:
 
-* <b>User mode:</b> This will remove any files not needed for the frontend to function. It will also minify CSS and JS output files. Source files will be included. This mode is recommended for the majority of users.
+* <b>User mode:</b> This will remove any files not needed for the frontend to function. It will also minify CSS and JS output files. Source map files will be included. You will be able to select a current 'stable' and previous 'legacy' release of assets. This mode is recommended for the majority of users.
 
-* <b>Developer mode:</b> This will keep all files used in the installation. You will be given the option to minify JS and CSS files. This is recommended for debug purposes. 
+* <b>Developer mode:</b> This will keep all files used in the installation including associated node packages. In addition to 'stable' and 'legacy' modes, you will be able to select an 'experimental' release option. This will provide you with the absolute latest version of each module. You will be given the option to minify JS and CSS files. This mode is recommended for debug purposes or users who want to test new styles that are currently under review by the UX Team. 
 
 ### Edit assets
 
