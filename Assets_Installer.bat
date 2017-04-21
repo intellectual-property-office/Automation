@@ -75,31 +75,6 @@ echo.
 echo.
 goto :prerequisites
 
-:edit
-echo.
-echo.
-echo.
-echo.
-echo "                                              "
-echo " '||''''|       '||   ||    .                 "
-echo "  ||  .       .. ||  ...  .||.                "
-echo "  ||''|     .'  '||   ||   ||                 "
-echo "  ||        |.   ||   ||   ||                 "
-echo " .||.....|  '|..'||. .||.  '|.'               "
-echo "                                              "
-echo "                                              "
-echo "     |                             .          "
-echo "    |||     ....   ....    ....  .||.   ....  "
-echo "   |  ||   ||. '  ||. '  .|...||  ||   ||. '  "
-echo "  .''''|.  . '|.. . '|.. ||       ||   . '|.. "
-echo " .|.  .||. |'..|' |'..|'  '|...'  '|.' |'..|' "
-echo "                                              "
-echo.
-echo.
-echo.
-echo.
-goto :prerequisites
-
 :prerequisites
 :: Setup prerequisites
 echo.
@@ -668,7 +643,6 @@ echo @import "ipo-assets-frontend/ipo-fonts"; > "ipo\assets\scss\ipo-fonts.scss"
 echo DONE
 echo.
 
-
 :: Move to working directory
 echo.
 cd IPO\assets
@@ -682,12 +656,14 @@ echo *                     Downloading Assets                   *
 echo *                                                          *
 echo ************************************************************
 echo.
+
 :: Install govuk-elements-sass and govuk_frontend_toolkit NPM modules (SCSS + JS + Images)
 echo.
 echo INSTALLING GovUK Elements Sass
-call npm install govuk-elements-sass@2.1.2
+call npm install govuk-elements-sass@3.0.2
 echo DONE
 echo.
+
 :: Install ipo-assets-frontend NPM module (SCSS + Images)
 echo.
 echo INSTALLING IPO Template Sass
@@ -705,19 +681,22 @@ echo *                     Importing Files                      *
 echo *                                                          *
 echo ************************************************************
 echo.
+
 :: Copy scss files for IPO module
 echo IMPORTING GovUK Template scss
-xcopy "node_modules\ipo-assets-frontend\sass\" "scss\ipo-assets-frontend" /s
+xcopy "node_modules\ipo-assets-frontend\sass" "scss\ipo-assets-frontend" /s
 echo DONE
 echo.
+
 :: Copy scss files for GovUK frontend toolkit module
 echo IMPORTING GovUK Frontend Toolkit Sass
-xcopy "node_modules\govuk_frontend_toolkit\stylesheets\" "scss\govuk_frontend_toolkit" /s
+xcopy "node_modules\govuk_frontend_toolkit\stylesheets" "scss\govuk_frontend_toolkit" /s
 echo DONE
 echo.
+
 :: Copy scss files for GovUK elements module
 echo IMPORTING GovUK elements Sass
-xcopy "node_modules\govuk-elements-sass\public\sass\" "scss\govuk-elements-sass" /s
+xcopy "node_modules\govuk-elements-sass\public\sass" "scss\govuk-elements-sass" /s
 echo DONE
 echo.
 
@@ -778,7 +757,7 @@ echo @import "elements/tables";                        // Tables - regular, nume
 echo @import "elements/details";                       // Details summary >> "scss\govuk-elements-sass\_govuk-elements.scss"
 echo @import "elements/panels";                        // Panels with a left grey border >> "scss\govuk-elements-sass\_govuk-elements.scss"
 echo @import "elements/forms";                         // Form - wrappers, inputs, labels >> "scss\govuk-elements-sass\_govuk-elements.scss"
-echo @import "elements/forms/form-block-labels";       // Chunky labels for radios and checkboxes >> "scss\govuk-elements-sass\_govuk-elements.scss"
+echo @import "elements/forms/form-multiple-choice";    // Custom radio buttons and checkboxes >> "scss\govuk-elements-sass\_govuk-elements.scss"
 echo @import "elements/forms/form-date";               // Date of birth pattern >> "scss\govuk-elements-sass\_govuk-elements.scss"
 echo @import "elements/forms/form-validation";         // Errors and validation >> "scss\govuk-elements-sass\_govuk-elements.scss"
 echo @import "elements/breadcrumbs";                   // Breadcrumbs >> "scss\govuk-elements-sass\_govuk-elements.scss"
@@ -811,6 +790,7 @@ echo *                    Select Environment                    *
 echo *                                                          *
 echo ************************************************************
 echo.
+
 :MENU
 echo 1 - User - This will finish the installation.
 echo 2 - Developer - This will start start the 'sass --watch' command ready for development.
