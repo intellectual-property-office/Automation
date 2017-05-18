@@ -96,9 +96,7 @@ echo.
 
 :: Create gulp config file for compiling SCSS to CSS
 echo CREATING Gulp Config File
-echo 'use strict'; > "frontend\gulpfile.js"
-echo. >> "frontend\gulpfile.js"
-echo var gulp = require('gulp'); >> "frontend\gulpfile.js"
+echo var gulp = require('gulp'); > "frontend\gulpfile.js"
 echo var sass = require('gulp-sass'); >> "frontend\gulpfile.js"
 echo. >> "frontend\gulpfile.js"
 echo var repo_root = __dirname + '/'; >> "frontend\gulpfile.js"
@@ -406,9 +404,10 @@ echo.
 echo IMPORTING GovUK Template CSS
 xcopy /s "node_modules\govuk_template_ejs\assets" "assets"
 echo DONE
+
 :: Copy images from ipo-assets-frontend NPM module
 echo IMPORTING IPO Images
-xcopy /s "node_modules\ipo-assets-frontend\images" "assets\images"
+xcopy /s "node_modules\ipo-assets-frontend\images" "assets\images" /y
 xcopy /s "node_modules\ipo-assets-frontend\external-links" "assets\stylesheets\external-links"
 echo DONE
 :: Copy font awesome CSS and fonts
@@ -489,6 +488,7 @@ echo var cleanCSS = require('gulp-clean-css'); >> "gulpfile.js"
 echo var minify = require('gulp-minify'); >> "gulpfile.js"
 echo var sourcemaps = require('gulp-sourcemaps'); >> "gulpfile.js"
 echo var rename = require('gulp-rename'); >> "gulpfile.js"
+echo. >> "gulpfile.js"
 echo // Minify CSS >> "gulpfile.js"
 echo gulp.task('minify-css', function() { >> "gulpfile.js"
 echo     return gulp.src('./assets/stylesheets/*.css') >> "gulpfile.js"
@@ -507,7 +507,6 @@ echo. >> "gulpfile.js"
 echo // Minify JS >> "gulpfile.js"
 echo gulp.task('compress-js', function() { >> "gulpfile.js"
 echo   gulp.src('./assets/javascripts/*.js') >> "gulpfile.js"
-echo     .pipe(sourcemaps.init()) >> "gulpfile.js"
 echo     .pipe(minify({ >> "gulpfile.js"
 echo         ext:{ >> "gulpfile.js"
 echo             src:'.js', >> "gulpfile.js"
@@ -516,8 +515,7 @@ echo         }, >> "gulpfile.js"
 echo         exclude: ['tasks'], >> "gulpfile.js"
 echo         ignoreFiles: ['.combo.js', '-min.js'] >> "gulpfile.js"
 echo     })) >> "gulpfile.js"
-echo     .pipe(sourcemaps.write('./maps')) >> "gulpfile.js"
-echo     .pipe(gulp.dest('./assets/javascripts')) >> "gulpfile.js"
+echo     .pipe(gulp.dest('./assets/javascripts')); >> "gulpfile.js"
 echo }); >> "gulpfile.js"
 echo DONE
 echo.
@@ -683,7 +681,7 @@ echo ************************************************************
 echo.
 
 :: Copy scss files for IPO module
-echo IMPORTING GovUK Template scss
+echo IMPORTING IPO Template scss
 xcopy "node_modules\ipo-assets-frontend\sass" "scss\ipo-assets-frontend" /s
 echo DONE
 echo.
@@ -792,18 +790,18 @@ echo ************************************************************
 echo.
 
 :MENU
-echo 1 - User - This will finish the installation.
-echo 2 - Developer - This will start start the 'sass --watch' command ready for development.
+echo 1 - Finish - This will finish the installation.
+echo 2 - Develop - This will start start the 'sass --watch' command ready for development.
 echo.
 SET /P EnvironmentType=Type 1 or 2 then press ENTER:
-IF %EnvironmentType%==1 GOTO SassUser
-IF %EnvironmentType%==2 GOTO SassDeveloper
+IF %EnvironmentType%==1 GOTO SassFinish
+IF %EnvironmentType%==2 GOTO SassDevelop
 
-:SassDeveloper
+:SassDevelop
 start cmd.exe @cmd /k "sass --watch scss:css"
 
 :: Go to end of script
-:SassUser
+:SassFinish
 echo.
 echo SASS And CSS Avaliable In "IPO\assets"
 echo.
