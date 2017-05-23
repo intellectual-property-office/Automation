@@ -318,7 +318,7 @@ echo ************************************************************
 echo.
 :: Install govuk-elements-sass and govuk_frontend_toolkit NPM modules (SCSS + JS + Images)
 echo INSTALLING GovUK Elements Sass
-call npm install govuk-elements-sass@3.0.2
+call npm install govuk-elements-sass@3.0.3
 echo DONE
 echo.
 :: Install govuk_template_ejs NPM module (CSS)
