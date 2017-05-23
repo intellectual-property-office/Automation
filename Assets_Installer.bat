@@ -328,7 +328,7 @@ echo DONE
 echo.
 :: Install ipo-assets-frontend NPM module (SCSS + Images)
 echo INSTALLING IPO Template Sass
-call npm i ipo-assets-frontend
+call npm i ipo-assets-frontend@1.0.30
 echo DONE
 echo.
 echo LATEST (STABLE) INSTALLATION SUCCESFUL
@@ -356,7 +356,7 @@ echo DONE
 echo.
 :: Install ipo-assets-frontend NPM module (SCSS + Images)
 echo INSTALLING IPO Template Sass
-call npm i ipo-assets-frontend
+call npm i ipo-assets-frontend@1.0.30
 echo DONE
 echo.
 echo LEGACY INSTALLATION SUCCESFUL
